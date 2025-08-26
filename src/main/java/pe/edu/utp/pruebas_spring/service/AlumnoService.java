@@ -1,6 +1,6 @@
-package service;
+package pe.edu.utp.pruebas_spring.service;
 
-import entity.Alumno;
+import pe.edu.utp.pruebas_spring.entity.Alumno;
 
 import java.util.List;
 

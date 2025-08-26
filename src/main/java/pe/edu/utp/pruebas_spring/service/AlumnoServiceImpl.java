@@ -1,7 +1,7 @@
-package service;
+package pe.edu.utp.pruebas_spring.service;
 
-import entity.Alumno;
-import repository.AlumnoRepository;
+import pe.edu.utp.pruebas_spring.entity.Alumno;
+import pe.edu.utp.pruebas_spring.repository.AlumnoRepository;
 
 import java.util.List;
 

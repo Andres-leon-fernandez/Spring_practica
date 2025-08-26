@@ -1,6 +1,6 @@
-package repository;
+package pe.edu.utp.pruebas_spring.repository;
 
-import entity.Alumno;
+import pe.edu.utp.pruebas_spring.entity.Alumno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

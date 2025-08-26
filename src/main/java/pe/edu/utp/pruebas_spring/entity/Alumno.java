@@ -1,4 +1,4 @@
-package entity;
+package pe.edu.utp.pruebas_spring.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
