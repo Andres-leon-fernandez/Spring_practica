@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Formulario Alumno</title>
-</head>
-<body>
-<h1>Formulario Alumno</h1>
-<form th:action="@{/alumnos}" th:object="${alumno}" method="post">
-    <input type="hidden" th:field="*{id}" />
-    Nombre: <input type="text" th:field="*{nombre}" /><br/>
-    Apellido: <input type="text" th:field="*{apellido}" /><br/>
-    Email: <input type="email" th:field="*{email}" /><br/>
-    <button type="submit">Guardar</button>
-</form>
-</body>
+    <head>
+        <title>Formulario Alumno</title>
+    </head>
+    <body>
+        <h1>Formulario Alumno</h1>
+        <form th:action="@{/alumnos}" th:object="${alumno}" method="post">
+            <input type="hidden" th:field="*{id}" />
+            Nombre: <input type="text" th:field="*{nombre}" /><br />
+            Apellido: <input type="text" th:field="*{apellido}" /><br />
+            Email: <input type="email" th:field="*{email}" /><br />
+            <button type="submit">Guardar</button>
+        </form>
+    </body>
 </html>

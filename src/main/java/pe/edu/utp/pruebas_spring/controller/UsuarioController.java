@@ -11,26 +11,25 @@ import java.util.List;
 
 @Controller
 public class UsuarioController {
-    private final List<String> usuarios = List.of("Andrés", "Maycol", "Christian");
+    private final List<String> usuarios = List.of("Andrés", "Maycol", "Christian", "user");
 
     // 1️⃣ Mostrar formulario de login
-    @GetMapping("/login")
+    @GetMapping("/Login")
     public String mostrarLogin(Model model) {
-        // Aquí mandas un objeto vacío para que Thymeleaf lo use en el form
         model.addAttribute("usuario", new Usuario());
-        return "login"; // → login.html
+        return "Login"; // → login.html
     }
 
     // 2️⃣ Procesar login
-    @PostMapping("/login")
+    @PostMapping("/Login")
     public String procesarLogin(@ModelAttribute Usuario usuario, Model model) {
         // Aquí validarías usuario/contraseña con tu servicio o BD
-        if ("admin".equals(usuario.getNombre()) && "123".equals(usuario.getPassword())) {
+        if ("user".equals(usuario.getUser()) && "1234".equals(usuario.getPassword())) {
             model.addAttribute("usuarios", usuarios);
-            return "lista"; // → lista.html
+            return "Lista"; // → lista.html
         } else {
             model.addAttribute("error", "Usuario o contraseña incorrectos");
-            return "login";
+            return "Login";
         }
     }
 
@@ -38,6 +37,6 @@ public class UsuarioController {
     @GetMapping("/usuarios")
     public String listarUsuarios(Model model) {
         model.addAttribute("usuarios", usuarios);
-        return "lista"; // → lista.html
+        return "Lista"; // → lista.html
     }
 }
